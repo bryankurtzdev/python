@@ -8,4 +8,5 @@ while n != 0:
             par += 1
         else:
             impar += 1
+
 print(f'Voce digitou {par} numeros pares e {impar} numeros impares!')
