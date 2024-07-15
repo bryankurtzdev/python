@@ -21,9 +21,10 @@ while resposta != 5:
         if n2 > maior:
             maior = n2
         print(f'O maior numero entre os dois e {maior:.1f}')
-    if resposta == 4:
+    elif resposta == 4:
         n1 = int(input('Digite um valor: '))
         n2 = int(input('Digite outro valor: '))
+
 print('Encerando programa', end='')
 sleep(0.3)
 print('.', end='')
