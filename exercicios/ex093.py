@@ -10,9 +10,8 @@ for c in range(0, nump):
 lista['gols'] = gols[:]
 lista['total'] = gols1
 print('-='*20)
-print(f'O campo nome tem o valor {lista['nome']}')
-print(f'O campo gols tem o valor de {lista['gols']}')
-print(f'O campo total tem o valor {lista['total']}')
+for k, v in lista.items():
+    print(f'O campo {k} tem o valor {v}')
 print('-='*20)
 for c in range(0, nump):
     print(f'    => Na partida {c}, fez {gols[c]}')
