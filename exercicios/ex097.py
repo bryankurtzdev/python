@@ -3,7 +3,8 @@ def escreva():
     print('-'*traco)
 
 
-msg = str(input('Escreva sua mensagem: '))
-escreva()
-print(msg)
-escreva()
+for c in range(0, 3):
+    msg = str(input('Escreva sua mensagem: '))
+    escreva()
+    print(msg)
+    escreva()
