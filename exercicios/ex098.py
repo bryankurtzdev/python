@@ -1,32 +1,33 @@
-def contador():
-    print()
-    print(f'Contagem de {i} ate {f} de {p} em {p}')
-    for c in range(i, f, p):
-        print(c, end=' ')
-        sleep(0.5)
-
-
-def cabecalho():
-    print('-='*30)
-
-
 from time import sleep
-cabecalho()
-print('Contagem de 1 ate 10 em 1 em 1.')
-for c in range(1, 11):
-    print(c, end=' ')
-    sleep(0.5)
-print()
-cabecalho()
-print('Contagem de 10 ate 0 de 2 em 2')
-for c in range(10, -1, -2):
-    sleep(0.5)
-    print(c, end=' ')
-print()
-cabecalho()
-print('Agora e sua vez de personalizar a contagem!')
-i = int(input('Inicio: '))
-f = int(input('Fim: '))
-p = int(input('Passo: '))
-cabecalho()
-contador()
+def contador(i, f, p):
+    if p < 0:
+        p *= -1
+    if p == 0:
+        p = 1
+    print('-='*20)
+    print(f'Contagem de {i} ate {f} de {p} em {p}')
+    sleep(2.5)
+    if i < f:
+        cont = 1
+        while cont<= f:
+            print(f'{cont}', end=' ')
+            sleep(0.5)
+            cont += p
+        print('FIM!!')
+    else:
+        cont = i
+        while cont >= f:
+            print(f'{cont}', end=' ')
+            sleep(0.5)
+            cont -= p
+        print('FIM!!')
+
+
+contador(1, 10, 1)
+contador(10, 0, 2)
+print('-='*20)
+print('Agora e sua vez de personalizar a sontagem!!')
+ini = int(input('Inicio: '))
+fim = int(input('Fim:    '))
+pas = int(input('Passo:  '))
+contador(ini, fim, pas)
