@@ -1,17 +1,13 @@
-from datetime import datetime
-
-
 def voto(ano):
+    from datetime import datetime
     idd = datetime.now().year - ano
     if idd < 16:
-        print(f'Devido a idade de {idd} anos seu nao e PERMITIDO!')
-        return idd
-    elif 16 < idd < 18:
-        print(f'Devido a idade de {idd} anos seu voto e OPCIONAL!')
-        return idd
+        return f'Devido a idade de {idd} anos seu voto nao e PERMITIDO!'
+    elif 16 < idd < 18 or idd > 65:
+        return f'Devido a idade de {idd} anos seu voto e OPCIONAL!'
     else:
-        print(f'Devido a sua idade de {idd} anos seu voto e OBRIGATORIO!')
-        return idd
+        return f'Devido a sua idade de {idd} anos seu voto e OBRIGATORIO!'
 
 
-idd = voto(int(input('Ano de nasciento: ')))
+nasc = voto(int(input('Ano de nasciento: ')))
+print(nasc)
