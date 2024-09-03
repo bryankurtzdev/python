@@ -14,4 +14,4 @@ def LeiaInt(msg):
 
 
 n = LeiaInt('Digite um numero: ')
-print(f'Voc acabou de digitar o numero {n}')
+print(f'Voce acabou de digitar o numero {n}')
