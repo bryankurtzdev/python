@@ -1,5 +1,13 @@
 from random import randint
 from time import sleep
+
+def quente_ou_frio(numero_jogado, numero_sorteado):
+    if numero_jogado < numero_sorteado:
+        print(f'O numero {numero_jogado} e menor que o numero sorteado.')
+    elif numero_jogado > numero_sorteado:
+        print(f'O numero {numero_jogado} e maior que o numero jogado')
+
+
 nome = str(input('Digite seu nome: ')).upper()
 comeco = 1
 c = 0
@@ -47,6 +55,7 @@ if numero == 5:
     print('Como voce escolheu esta dificuldade voce so tera 3 chances de acertar.')
     for c in range(1, 4):
         jogada = int(input('Digite o numero que voce acha que eu pensei: '))
+        
         if jogada == sorteio:
             print('impossive-')
             print('Como voce acertou!?')
@@ -54,7 +63,7 @@ if numero == 5:
         else:
             print('Eu lhe disse que era quase impossivel!')
             print('Tente novamente, talvez em alguns anos tentando voce consegue...')
-
+        quente_ou_frio(jogada, sorteio)
 if numero == 4:
     print('Como voce escolheu esta dificuldade voce so tera 10 chances de acertar.')
     for c in range(1, 11):
@@ -66,6 +75,7 @@ if numero == 4:
         else:
 
             print('Tente novamente, talvez em alguns dias tentando voce consegue...')
+        quente_ou_frio(jogada, sorteio)
 
 if numero == 3:
     print('Como voce escolheu esta dificuldade voce so tera 50 chances de acertar.')
@@ -77,6 +87,7 @@ if numero == 3:
         else:
 
             print('Tente novamente, talvez em algumas horas tentando voce consegue...')
+        quente_ou_frio(jogada, sorteio)
 
 if numero != 5 and numero != 4 and numero != 3:
     while jogada != sorteio:
@@ -91,5 +102,5 @@ if numero != 5 and numero != 4 and numero != 3:
         else:
             totrodadas += 1
             print('Errou, tente novamente!')
+        quente_ou_frio(jogada, sorteio)
 print('Fim...')
-
