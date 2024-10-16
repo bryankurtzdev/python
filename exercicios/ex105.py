@@ -13,7 +13,7 @@ def notas(*n, sit=False):
     if sit:
         if r['media'] >= 7:
             r['situacao'] = 'BOA'
-        elif r ['media'] >= 5:
+        elif r['media'] >= 5:
             r['situacao'] = 'RAZOAVEL'
         else:
             r['situacao'] = 'RUIM'
